@@ -1,449 +1,235 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elysia - Privacy Policy</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.7;
-            background: linear-gradient(135deg, #f5f1eb 0%, #f8f5f0 100%);
-            color: #333;
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding: 30px 0;
-        }
-
-        .logo {
-            display: inline-block;
-            position: relative;
-            margin-bottom: 20px;
-        }
-
-        .logo-text {
-            font-size: 3.5rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 25%, #673ab7 50%, #ff9800 75%, #ff5722 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-style: italic;
-            letter-spacing: -0.02em;
-        }
-
-        .logo-accent {
-            position: absolute;
-            top: -10px;
-            right: -20px;
-            font-size: 2rem;
-        }
-
-        .accent-dot {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin: 0 2px;
-        }
-
-        .accent-dot:nth-child(1) {
-            background: #e91e63;
-            transform: rotate(-15deg);
-        }
-
-        .accent-dot:nth-child(2) {
-            background: #ff9800;
-            transform: rotate(15deg);
-        }
-
-        .accent-dot:nth-child(3) {
-            background: #ff5722;
-            transform: rotate(-10deg);
-        }
-
-        .page-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        .subtitle {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 30px;
-        }
-
-        .content {
-            background: rgba(255, 255, 255, 0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        h1 {
-            font-size: 2rem;
-            font-weight: 700;
-            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 30px 0 20px 0;
-            border-bottom: 3px solid;
-            border-image: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%) 1;
-            padding-bottom: 10px;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 25px 0 15px 0;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            background: linear-gradient(135deg, #673ab7 0%, #ff9800 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin: 20px 0 10px 0;
-        }
-
-        p {
-            margin-bottom: 15px;
-            color: #444;
-        }
-
-        ul {
-            margin-left: 20px;
-            margin-bottom: 15px;
-        }
-
-        li {
-            margin-bottom: 8px;
-            color: #444;
-        }
-
-        .highlight-box {
-            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);
-            border-left: 4px solid #e91e63;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 10px;
-        }
-
-        .date-info {
-            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
-            border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-
-        .contact-info {
-            background: linear-gradient(135deg, rgba(103, 58, 183, 0.1) 0%, rgba(233, 30, 99, 0.1) 100%);
-            border-radius: 15px;
-            padding: 25px;
-            margin-top: 30px;
-            text-align: center;
-        }
-
-        .contact-info h2 {
-            margin-top: 0;
-        }
-
-        a {
-            color: #e91e63;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 40px;
-            padding: 20px;
-            color: #666;
-            font-style: italic;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .content {
-                padding: 25px;
-            }
-            
-            .logo-text {
-                font-size: 2.5rem;
-            }
-            
-            .page-title {
-                font-size: 2rem;
-            }
-            
-            h1 {
-                font-size: 1.5rem;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysia - Privacy Policy</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <div class="logo">
-                <div class="logo-text">elysia</div>
-                <div class="logo-accent">
-                    <span class="accent-dot"></span>
-                    <span class="accent-dot"></span>
-                    <span class="accent-dot"></span>
-                </div>
-            </div>
-            <h1 class="page-title">Privacy Policy</h1>
-            <p class="subtitle">AI-Powered Photo Enhancement</p>
-        </div>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">elysia</div>
+                <div class="logo-accent">
+                    <span class="accent-dot"></span>
+                    <span class="accent-dot"></span>
+                    <span class="accent-dot"></span>
+                </div>
+            </div>
+            <h1 class="page-title">Privacy Policy</h1>
+            <p class="subtitle">AI-Powered Photo Enhancement</p>
+        </div>
 
-        <div class="content">
-            <div class="date-info">
-                <p><strong>Effective Date:</strong> July 31, 2025</p>
-                <p><strong>Last Updated:</strong> August 01, 2025</p>
-            </div>
+        <div class="content">
+            <div class="date-info">
+                <p><strong>Effective Date:</strong> July 31, 2025</p>
+                <p><strong>Last Updated:</strong> August 01, 2025</p>
+            </div>
 
-            <h1>Introduction</h1>
-            <p>This Privacy Policy describes how The Blucks ("we," "our," or "us") collects, uses, and protects your information when you use our AI-powered photo enhancement mobile application (the "Service").</p>
+            <h1>Introduction</h1>
+            <p>This Privacy Policy describes how The Blucks ("we," "our," or "us") collects, uses, and protects your information when you use our AI-powered photo enhancement mobile application (the "Service").</p>
 
-            <h1>Information We Collect</h1>
+            <h1>Information We Collect</h1>
 
-            <h2>Photos and Images</h2>
-            <ul>
-                <li><strong>Original Photos:</strong> We temporarily process photos you upload to provide enhancement services</li>
-                <li><strong>Enhanced Photos:</strong> We generate and temporarily store enhanced versions of your photos</li>
-                <li><strong>Processing Data:</strong> Technical data required for AI enhancement (facial landmarks, feature analysis)</li>
-            </ul>
+            <h2>Photos and Images</h2>
+            <ul>
+                <li><strong>Original Photos:</strong> We temporarily process photos you upload to provide enhancement services</li>
+                <li><strong>Enhanced Photos:</strong> We generate and temporarily store enhanced versions of your photos</li>
+                <li><strong>Processing Data:</strong> Technical data required for AI enhancement (facial landmarks, feature analysis)</li>
+            </ul>
 
-            <h2>Device Information</h2>
-            <ul>
-                <li>Device type, operating system, and version</li>
-                <li>App version and usage analytics</li>
-                <li>Crash logs and performance data</li>
-                <li>Device identifiers (for analytics purposes only)</li>
-            </ul>
+            <h2>Device Information</h2>
+            <ul>
+                <li>Device type, operating system, and version</li>
+                <li>App version and usage analytics</li>
+                <li>Crash logs and performance data</li>
+                <li>Device identifiers (for analytics purposes only)</li>
+            </ul>
 
-            <h2>Usage Data</h2>
-            <ul>
-                <li>Features used within the app</li>
-                <li>Enhancement preferences and selections</li>
-                <li>Time spent using the app</li>
-                <li>Error logs and diagnostic information</li>
-            </ul>
+            <h2>Usage Data</h2>
+            <ul>
+                <li>Features used within the app</li>
+                <li>Enhancement preferences and selections</li>
+                <li>Time spent using the app</li>
+                <li>Error logs and diagnostic information</li>
+            </ul>
 
-            <h2>Optional Account Information</h2>
-            <ul>
-                <li>If you create an account: email address, username</li>
-                <li>Profile information you choose to provide</li>
-                <li>Subscription and payment information (processed by third-party payment providers)</li>
-            </ul>
+            <h2>Optional Account Information</h2>
+            <ul>
+                <li>If you create an account: email address, username</li>
+                <li>Profile information you choose to provide</li>
+                <li>Subscription and payment information (processed by third-party payment providers)</li>
+            </ul>
 
-            <h1>How We Use Your Information</h1>
+            <h1>How We Use Your Information</h1>
 
-            <h2>Photo Processing</h2>
-            <ul>
-                <li><strong>AI Enhancement:</strong> Your photos are processed using Magic Hour AI's API to generate enhanced versions</li>
-                <li><strong>Temporary Storage:</strong> Photos are temporarily stored only during the enhancement process</li>
-                <li><strong>Feature Analysis:</strong> We analyze facial features to provide personalized enhancements</li>
-            </ul>
+            <h2>Photo Processing</h2>
+            <ul>
+                <li><strong>AI Enhancement:</strong> Your photos are processed using Magic Hour AI's API to generate enhanced versions</li>
+                <li><strong>Temporary Storage:</strong> Photos are temporarily stored only during the enhancement process</li>
+                <li><strong>Feature Analysis:</strong> We analyze facial features to provide personalized enhancements</li>
+            </ul>
 
-            <h2>Service Improvement</h2>
-            <ul>
-                <li>Analyze usage patterns to improve app functionality</li>
-                <li>Identify and fix technical issues</li>
-                <li>Develop new features and enhancements</li>
-                <li>Provide customer support</li>
-            </ul>
+            <h2>Service Improvement</h2>
+            <ul>
+                <li>Analyze usage patterns to improve app functionality</li>
+                <li>Identify and fix technical issues</li>
+                <li>Develop new features and enhancements</li>
+                <li>Provide customer support</li>
+            </ul>
 
-            <h2>Legal Compliance</h2>
-            <ul>
-                <li>Comply with applicable laws and regulations</li>
-                <li>Protect our rights and prevent misuse</li>
-                <li>Respond to legal requests when required</li>
-            </ul>
+            <h2>Legal Compliance</h2>
+            <ul>
+                <li>Comply with applicable laws and regulations</li>
+                <li>Protect our rights and prevent misuse</li>
+                <li>Respond to legal requests when required</li>
+            </ul>
 
-            <h1>Photo Data Handling</h1>
+            <h1>Photo Data Handling</h1>
 
-            <div class="highlight-box">
-                <h2>Processing Location</h2>
-                <ul>
-                    <li>Photos are processed using Magic Hour AI's secure cloud infrastructure</li>
-                    <li>Processing occurs in the United States of America</li>
-                    <li>All data transmission is encrypted using industry-standard protocols</li>
-                </ul>
-            </div>
+            <div class="highlight-box">
+                <h2>Processing Location</h2>
+                <ul>
+                    <li>Photos are processed using Magic Hour AI's secure cloud infrastructure</li>
+                    <li>Processing occurs in the United States of America</li>
+                    <li>All data transmission is encrypted using industry-standard protocols</li>
+                </ul>
+            </div>
 
-            <h2>Storage Duration</h2>
-            <ul>
-                <li><strong>Original Photos:</strong> Deleted immediately after processing (typically within 1 hour)</li>
-                <li><strong>Enhanced Photos:</strong> Stored temporarily for download, then deleted within 24 hours</li>
-                <li><strong>Processing Metadata:</strong> Deleted within 7 days</li>
-            </ul>
+            <h2>Storage Duration</h2>
+            <ul>
+                <li><strong>Original Photos:</strong> Deleted immediately after processing (typically within 1 hour)</li>
+                <li><strong>Enhanced Photos:</strong> Stored temporarily for download, then deleted within 24 hours</li>
+                <li><strong>Processing Metadata:</strong> Deleted within 7 days</li>
+            </ul>
 
-            <h2>No Permanent Storage</h2>
-            <ul>
-                <li>We do not permanently store your photos on our servers</li>
-                <li>Enhanced photos are available for download for a limited time only</li>
-                <li>You are responsible for saving photos you wish to keep</li>
-            </ul>
+            <h2>No Permanent Storage</h2>
+            <ul>
+                <li>We do not permanently store your photos on our servers</li>
+                <li>Enhanced photos are available for download for a limited time only</li>
+                <li>You are responsible for saving photos you wish to keep</li>
+            </ul>
 
-            <h1>Third-Party Services</h1>
+            <h1>Third-Party Services</h1>
 
-            <h2>Magic Hour AI</h2>
-            <ul>
-                <li>We use Magic Hour AI's API for photo enhancement</li>
-                <li>Your photos are processed according to Magic Hour AI's privacy practices</li>
-                <li>Magic Hour AI does not retain your photos after processing</li>
-            </ul>
+            <h2>Magic Hour AI</h2>
+            <ul>
+                <li>We use Magic Hour AI's API for photo enhancement</li>
+                <li>Your photos are processed according to Magic Hour AI's privacy practices</li>
+                <li>Magic Hour AI does not retain your photos after processing</li>
+            </ul>
 
-            <h2>Analytics Services</h2>
-            <ul>
-                <li>We may use analytics services like Google Analytics or Firebase</li>
-                <li>These services collect usage data to help us improve the app</li>
-                <li>You can opt out of analytics in app settings</li>
-            </ul>
+            <h2>Analytics Services</h2>
+            <ul>
+                <li>We may use analytics services like Google Analytics or Firebase</li>
+                <li>These services collect usage data to help us improve the app</li>
+                <li>You can opt out of analytics in app settings</li>
+            </ul>
 
-            <h2>Payment Processing</h2>
-            <ul>
-                <li>Subscription payments are processed by Apple App Store</li>
-                <li>We do not store payment card information</li>
-                <li>Payment data is handled according to the payment processor's privacy policy</li>
-            </ul>
+            <h2>Payment Processing</h2>
+            <ul>
+                <li>Subscription payments are processed by Apple App Store</li>
+                <li>We do not store payment card information</li>
+                <li>Payment data is handled according to the payment processor's privacy policy</li>
+            </ul>
 
-            <h1>Data Sharing</h1>
-            <p>We do not sell, trade, or rent your personal information to third parties.</p>
+            <h1>Data Sharing</h1>
+            <p>We do not sell, trade, or rent your personal information to third parties.</p>
 
-            <h2>Limited Sharing Scenarios</h2>
-            <ul>
-                <li><strong>Service Providers:</strong> Trusted partners who help us operate the app (under strict confidentiality agreements)</li>
-                <li><strong>Legal Requirements:</strong> When required by law, court order, or to protect our legal rights</li>
-                <li><strong>Business Transfer:</strong> In case of merger, acquisition, or asset sale (users will be notified)</li>
-            </ul>
+            <h2>Limited Sharing Scenarios</h2>
+            <ul>
+                <li><strong>Service Providers:</strong> Trusted partners who help us operate the app (under strict confidentiality agreements)</li>
+                <li><strong>Legal Requirements:</strong> When required by law, court order, or to protect our legal rights</li>
+                <li><strong>Business Transfer:</strong> In case of merger, acquisition, or asset sale (users will be notified)</li>
+            </ul>
 
-            <h1>Your Rights and Choices</h1>
+            <h1>Your Rights and Choices</h1>
 
-            <h2>Photo Control</h2>
-            <ul>
-                <li>You can delete photos from your device at any time</li>
-                <li>Enhanced photos are automatically deleted from our servers</li>
-                <li>You can request immediate deletion of any data we may have</li>
-            </ul>
+            <h2>Photo Control</h2>
+            <ul>
+                <li>You can delete photos from your device at any time</li>
+                <li>Enhanced photos are automatically deleted from our servers</li>
+                <li>You can request immediate deletion of any data we may have</li>
+            </ul>
 
-            <h2>Account Management</h2>
-            <ul>
-                <li>Access and update your account information</li>
-                <li>Delete your account and associated data</li>
-                <li>Export your data (where applicable)</li>
-            </ul>
+            <h2>Account Management</h2>
+            <ul>
+                <li>Access and update your account information</li>
+                <li>Delete your account and associated data</li>
+                <li>Export your data (where applicable)</li>
+            </ul>
 
-            <h2>Communication Preferences</h2>
-            <ul>
-                <li>Opt out of promotional communications</li>
-                <li>Control push notifications in device settings</li>
-            </ul>
+            <h2>Communication Preferences</h2>
+            <ul>
+                <li>Opt out of promotional communications</li>
+                <li>Control push notifications in device settings</li>
+            </ul>
 
-            <h2>Data Protection Rights (GDPR/CCPA)</h2>
-            <p>If you're in the EU or California, you have additional rights:</p>
-            <ul>
-                <li>Right to access your personal data</li>
-                <li>Right to correct inaccurate data</li>
-                <li>Right to delete your data</li>
-                <li>Right to restrict processing</li>
-                <li>Right to data portability</li>
-                <li>Right to object to processing</li>
-            </ul>
+            <h2>Data Protection Rights (GDPR/CCPA)</h2>
+            <p>If you're in the EU or California, you have additional rights:</p>
+            <ul>
+                <li>Right to access your personal data</li>
+                <li>Right to correct inaccurate data</li>
+                <li>Right to delete your data</li>
+                <li>Right to restrict processing</li>
+                <li>Right to data portability</li>
+                <li>Right to object to processing</li>
+            </ul>
 
-            <h1>Data Security</h1>
+            <h1>Data Security</h1>
 
-            <h2>Technical Safeguards</h2>
-            <ul>
-                <li>End-to-end encryption for photo transmission</li>
-                <li>Secure cloud infrastructure with industry-standard protections</li>
-                <li>Regular security audits and updates</li>
-                <li>Access controls and authentication requirements</li>
-            </ul>
+            <h2>Technical Safeguards</h2>
+            <ul>
+                <li>End-to-end encryption for photo transmission</li>
+                <li>Secure cloud infrastructure with industry-standard protections</li>
+                <li>Regular security audits and updates</li>
+                <li>Access controls and authentication requirements</li>
+            </ul>
 
-            <h2>Operational Safeguards</h2>
-            <ul>
-                <li>Employee training on data protection</li>
-                <li>Limited access to personal data on need-to-know basis</li>
-                <li>Regular security assessments</li>
-                <li>Incident response procedures</li>
-            </ul>
+            <h2>Operational Safeguards</h2>
+            <ul>
+                <li>Employee training on data protection</li>
+                <li>Limited access to personal data on need-to-know basis</li>
+                <li>Regular security assessments</li>
+                <li>Incident response procedures</li>
+            </ul>
 
-            <h1>International Data Transfers</h1>
-            <ul>
-                <li>Your data may be processed in countries other than your own</li>
-                <li>We ensure adequate protection through appropriate safeguards</li>
-                <li>EU users: transfers comply with GDPR requirements</li>
-                <li>We use standard contractual clauses and adequacy decisions where applicable</li>
-            </ul>
+            <h1>International Data Transfers</h1>
+            <ul>
+                <li>Your data may be processed in countries other than your own</li>
+                <li>We ensure adequate protection through appropriate safeguards</li>
+                <li>EU users: transfers comply with GDPR requirements</li>
+                <li>We use standard contractual clauses and adequacy decisions where applicable</li>
+            </ul>
 
-            <h1>Children's Privacy</h1>
-            <ul>
-                <li>Our app is not intended for children under 13</li>
-                <li>We do not knowingly collect data from children under 13</li>
-                <li>If we discover we have collected such data, we will delete it immediately</li>
-                <li>Parents can contact us to request deletion of their child's data</li>
-            </ul>
+            <h1>Children's Privacy</h1>
+            <ul>
+                <li>Our app is not intended for children under 13</li>
+                <li>We do not knowingly collect data from children under 13</li>
+                <li>If we discover we have collected such data, we will delete it immediately</li>
+                <li>Parents can contact us to request deletion of their child's data</li>
+            </ul>
 
-            <h1>Changes to This Policy</h1>
-            <ul>
-                <li>We may update this Privacy Policy periodically</li>
-                <li>Material changes will be communicated through the app or email</li>
-                <li>Continued use after changes constitutes acceptance</li>
-                <li>Previous versions are available upon request</li>
-            </ul>
+            <h1>Changes to This Policy</h1>
+            <ul>
+                <li>We may update this Privacy Policy periodically</li>
+                <li>Material changes will be communicated through the app or email</li>
+                <li>Continued use after changes constitutes acceptance</li>
+                <li>Previous versions are available upon request</li>
+            </ul>
 
-            <div class="contact-info">
-                <h2>Contact Us</h2>
-                <p>If you have questions about this Privacy Policy or our data practices:</p>
-                <p><strong>Email:</strong> <a href="mailto:son.jaehoon0826@gmail.com">son.jaehoon0826@gmail.com</a></p>
-                <p><strong>Address:</strong> 500 College Ave, Swarthmore, PA 19081</p>
-            </div>
+            <div class="contact-info">
+                <h2>Contact Us</h2>
+                <p>If you have questions about this Privacy Policy or our data practices:</p>
+                <p><strong>Email:</strong> <a href="mailto:son.jaehoon0826@gmail.com">son.jaehoon0826@gmail.com</a></p>
+                <p><strong>Address:</strong> 500 College Ave, Swarthmore, PA 19081</p>
+            </div>
 
-            <div class="footer">
-                <p>This Privacy Policy is designed to be transparent about our data practices. If you have any questions or concerns, please don't hesitate to contact us.</p>
-            </div>
-        </div>
-    </div>
+            <div class="footer">
+                <p>This Privacy Policy is designed to be transparent about our data practices. If you have any questions or concerns, please don't hesitate to contact us.</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
