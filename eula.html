@@ -1,11 +1,558 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    EULA
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysia - End User License Agreement</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #f5f1eb 0%, #f8f5f0 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+        }
+
+        .logo {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .logo-text {
+            font-size: 3.5rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 25%, #673ab7 50%, #ff9800 75%, #ff5722 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-style: italic;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-accent {
+            position: absolute;
+            top: -10px;
+            right: -20px;
+            font-size: 2rem;
+        }
+
+        .accent-dot {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin: 0 2px;
+        }
+
+        .accent-dot:nth-child(1) {
+            background: #e91e63;
+            transform: rotate(-15deg);
+        }
+
+        .accent-dot:nth-child(2) {
+            background: #ff9800;
+            transform: rotate(15deg);
+        }
+
+        .accent-dot:nth-child(3) {
+            background: #ff5722;
+            transform: rotate(-10deg);
+        }
+
+        .page-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 50%, #673ab7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+        }
+
+        .content {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 30px 0 20px 0;
+            border-bottom: 3px solid;
+            border-image: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%) 1;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #9c27b0 0%, #673ab7 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 25px 0 15px 0;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #673ab7 0%, #ff9800 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin: 20px 0 10px 0;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #444;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #444;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1) 0%, rgba(156, 39, 176, 0.1) 100%);
+            border-left: 4px solid #e91e63;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.15) 0%, rgba(255, 87, 34, 0.15) 100%);
+            border: 2px solid #ff9800;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 15px;
+        }
+
+        .date-info {
+            background: linear-gradient(135deg, rgba(255, 152, 0, 0.1) 0%, rgba(255, 87, 34, 0.1) 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, rgba(103, 58, 183, 0.1) 0%, rgba(233, 30, 99, 0.1) 100%);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+        }
+
+        .agreement-acceptance {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.15) 0%, rgba(156, 39, 176, 0.15) 100%);
+            border: 2px solid #e91e63;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .section-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            font-weight: bold;
+            margin-right: 10px;
+            font-size: 0.9rem;
+        }
+
+        .subsection {
+            margin-left: 20px;
+        }
+
+        .caps-text {
+            font-weight: bold;
+            color: #e91e63;
+        }
+
+        a {
+            color: #e91e63;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .logo-text {
+                font-size: 2.5rem;
+            }
+            
+            .page-title {
+                font-size: 1.8rem;
+            }
+            
+            h1 {
+                font-size: 1.4rem;
+            }
+            
+            .section-number {
+                width: 25px;
+                height: 25px;
+                line-height: 25px;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <div class="logo-text">elysia</div>
+                <div class="logo-accent">
+                    <span class="accent-dot"></span>
+                    <span class="accent-dot"></span>
+                    <span class="accent-dot"></span>
+                </div>
+            </div>
+            <h1 class="page-title">End User License Agreement</h1>
+            <p class="subtitle">Terms of Service & License</p>
+        </div>
+
+        <div class="content">
+            <div class="date-info">
+                <p><strong>Effective Date:</strong> July 31, 2025</p>
+                <p><strong>Last Updated:</strong> August 01, 2025</p>
+            </div>
+
+            <h1>Agreement Overview</h1>
+            <p>This End User License Agreement ("Agreement" or "EULA") is a legal contract between you ("User," "you," or "your") and The Blucks ("Company," "we," "our," or "us") regarding your use of the Elysia mobile application ("App" or "Service").</p>
+
+            <div class="warning-box">
+                <p><strong>By downloading, installing, or using this App, you agree to be bound by this Agreement. If you do not agree to these terms, do not use the App.</strong></p>
+            </div>
+
+            <h1><span class="section-number">1</span>License Grant</h1>
+
+            <h2>1.1 Limited License</h2>
+            <p>We grant you a limited, non-exclusive, non-transferable, revocable license to download, install, and use the App on your compatible mobile devices solely for personal, non-commercial purposes.</p>
+
+            <h2>1.2 License Restrictions</h2>
+            <p>You may not:</p>
+            <ul>
+                <li>Copy, modify, or create derivative works of the App</li>
+                <li>Reverse engineer, decompile, or disassemble the App</li>
+                <li>Distribute, sell, lease, rent, or sublicense the App</li>
+                <li>Use the App for commercial purposes without express written permission</li>
+                <li>Remove or alter any proprietary notices or labels</li>
+            </ul>
+
+            <h2>1.3 Updates and Modifications</h2>
+            <p>We may provide updates, patches, or new versions of the App. Your continued use constitutes acceptance of any updates to this Agreement.</p>
+
+            <h1><span class="section-number">2</span>Photo Enhancement Services</h1>
+
+            <h2>2.1 AI Processing</h2>
+            <ul>
+                <li>The App uses artificial intelligence to enhance your photos</li>
+                <li>Processing is performed using third-party AI services (Magic Hour AI)</li>
+                <li>Enhancement results may vary based on photo quality and content</li>
+                <li>We do not guarantee specific enhancement outcomes</li>
+            </ul>
+
+            <h2>2.2 Photo Ownership</h2>
+            <ul>
+                <li>You retain all rights to your original photos</li>
+                <li>Enhanced photos are derivative works that you may use freely</li>
+                <li>You grant us a limited license to process your photos solely to provide the Service</li>
+                <li>We do not claim ownership of your photos or enhanced versions</li>
+            </ul>
+
+            <h2>2.3 Content Responsibility</h2>
+            <p>You are solely responsible for:</p>
+            <ul>
+                <li>Ensuring you have rights to upload and process photos</li>
+                <li>Compliance with applicable laws regarding photo content</li>
+                <li>Not uploading inappropriate, illegal, or copyrighted content</li>
+                <li>Respecting privacy rights of individuals in photos</li>
+            </ul>
+
+            <h1><span class="section-number">3</span>Prohibited Uses</h1>
+            <p>You agree not to use the App to:</p>
+            <ul>
+                <li>Process photos containing illegal content</li>
+                <li>Create deepfakes or misleading manipulated images</li>
+                <li>Violate privacy rights of individuals without consent</li>
+                <li>Generate content that could be harmful, defamatory, or offensive</li>
+                <li>Circumvent or disable App security features</li>
+                <li>Interfere with the App's operation or other users' experience</li>
+            </ul>
+
+            <h1><span class="section-number">4</span>Subscription and Payment Terms</h1>
+
+            <h2>4.1 Subscription Services</h2>
+            <ul>
+                <li>Some features may require a paid subscription</li>
+                <li>Subscriptions automatically renew unless cancelled</li>
+                <li>Prices and billing periods are displayed in the App</li>
+                <li>Payment is processed through your device's app store</li>
+            </ul>
+
+            <h2>4.2 Free Trial</h2>
+            <ul>
+                <li>Free trials may be offered for premium features</li>
+                <li>Trial periods are specified in the App</li>
+                <li>Automatic billing begins after trial unless cancelled</li>
+                <li>Only one free trial per user account</li>
+            </ul>
+
+            <h2>4.3 Refunds</h2>
+            <ul>
+                <li>Refund policies are governed by your app store's terms</li>
+                <li>We do not process direct refunds for app store purchases</li>
+                <li>Contact your app store for refund requests</li>
+                <li>Refunds do not extend usage rights beyond the refund period</li>
+            </ul>
+
+            <h1><span class="section-number">5</span>Intellectual Property</h1>
+
+            <h2>5.1 App Ownership</h2>
+            <ul>
+                <li>The App and all related intellectual property are owned by us or our licensors</li>
+                <li>This includes software, algorithms, user interface, and documentation</li>
+                <li>No ownership rights are transferred to you under this Agreement</li>
+            </ul>
+
+            <h2>5.2 Trademarks</h2>
+            <ul>
+                <li>App names, logos, and trademarks are our property</li>
+                <li>You may not use our trademarks without express written permission</li>
+                <li>Third-party trademarks remain property of their respective owners</li>
+            </ul>
+
+            <h2>5.3 User Content</h2>
+            <ul>
+                <li>You retain ownership of photos you upload</li>
+                <li>You grant us necessary rights to provide the Service</li>
+                <li>You represent that you have rights to all uploaded content</li>
+            </ul>
+
+            <h1><span class="section-number">6</span>Privacy and Data Protection</h1>
+
+            <h2>6.1 Privacy Policy</h2>
+            <ul>
+                <li>Our Privacy Policy governs data collection and use</li>
+                <li>The Privacy Policy is incorporated into this Agreement</li>
+                <li>You consent to data processing as described in the Privacy Policy</li>
+            </ul>
+
+            <h2>6.2 Data Security</h2>
+            <ul>
+                <li>We implement reasonable security measures</li>
+                <li>No system is completely secure; use at your own risk</li>
+                <li>Report security concerns to us immediately</li>
+            </ul>
+
+            <h1><span class="section-number">7</span>Disclaimers and Limitations</h1>
+
+            <h2>7.1 Service Availability</h2>
+            <ul>
+                <li>The App is provided "as is" and "as available"</li>
+                <li>We do not guarantee uninterrupted or error-free service</li>
+                <li>Maintenance, updates, or technical issues may cause temporary unavailability</li>
+            </ul>
+
+            <h2>7.2 Enhancement Quality</h2>
+            <ul>
+                <li>AI enhancement results are not guaranteed</li>
+                <li>Quality depends on original photo characteristics</li>
+                <li>We make no warranties about enhancement accuracy or suitability</li>
+            </ul>
+
+            <h2>7.3 Third-Party Services</h2>
+            <ul>
+                <li>The App relies on third-party services (Magic Hour AI, cloud providers)</li>
+                <li>Third-party service interruptions may affect App functionality</li>
+                <li>We are not responsible for third-party service failures</li>
+            </ul>
+
+            <h1><span class="section-number">8</span>Limitation of Liability</h1>
+
+            <h2>8.1 Damages Limitation</h2>
+            <div class="highlight-box">
+                <p class="caps-text">TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
+                <ul>
+                    <li>Our total liability is limited to the amount you paid for the App</li>
+                    <li>We are not liable for indirect, incidental, or consequential damages</li>
+                    <li>This includes loss of data, profits, or business opportunities</li>
+                </ul>
+            </div>
+
+            <h2>8.2 User Responsibility</h2>
+            <p>You are responsible for:</p>
+            <ul>
+                <li>Backing up important photos before processing</li>
+                <li>Compliance with applicable laws and regulations</li>
+                <li>Any consequences of your use of the App</li>
+            </ul>
+
+            <h1><span class="section-number">9</span>Indemnification</h1>
+            <p>You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from:</p>
+            <ul>
+                <li>Your use of the App</li>
+                <li>Your violation of this Agreement</li>
+                <li>Your violation of any laws or third-party rights</li>
+                <li>Content you upload or process through the App</li>
+            </ul>
+
+            <h1><span class="section-number">10</span>Termination</h1>
+
+            <h2>10.1 Termination Rights</h2>
+            <ul>
+                <li>You may terminate this Agreement by deleting the App</li>
+                <li>We may terminate your access for violation of this Agreement</li>
+                <li>Termination may be immediate without notice for serious violations</li>
+            </ul>
+
+            <h2>10.2 Effect of Termination</h2>
+            <p>Upon termination:</p>
+            <ul>
+                <li>Your license to use the App ends immediately</li>
+                <li>You must delete the App from all devices</li>
+                <li>Surviving provisions continue to apply</li>
+                <li>No refunds for prepaid subscription periods</li>
+            </ul>
+
+            <h1><span class="section-number">11</span>App Store Terms</h1>
+
+            <h2>11.1 Additional Terms</h2>
+            <ul>
+                <li>App store terms also apply to your use of the App</li>
+                <li>In case of conflict, app store terms may take precedence</li>
+                <li>We are not responsible for app store policy violations</li>
+            </ul>
+
+            <h2>11.2 Device Requirements</h2>
+            <ul>
+                <li>Compatible iOS/Android device required</li>
+                <li>Minimum system requirements specified in app store</li>
+                <li>Internet connection required for core functionality</li>
+            </ul>
+
+            <h1><span class="section-number">12</span>Geographic Restrictions</h1>
+            <ul>
+                <li>The App may not be available in all countries</li>
+                <li>You are responsible for compliance with local laws</li>
+                <li>Some features may be restricted based on location</li>
+                <li>Export control laws may apply to the App</li>
+            </ul>
+
+            <h1><span class="section-number">13</span>Governing Law and Disputes</h1>
+
+            <h2>13.1 Governing Law</h2>
+            <p>This Agreement is governed by the laws of Pennsylvania, United States, without regard to conflict of law principles.</p>
+
+            <h2>13.2 Dispute Resolution</h2>
+            <ul>
+                <li>First attempt to resolve disputes through direct communication</li>
+                <li>Binding arbitration may be required for certain disputes</li>
+                <li>Class action waivers may apply where legally permissible</li>
+                <li>Some jurisdictions may require court resolution</li>
+            </ul>
+
+            <h1><span class="section-number">14</span>General Provisions</h1>
+
+            <h2>14.1 Entire Agreement</h2>
+            <p>This Agreement, together with our Privacy Policy, constitutes the entire agreement between you and us.</p>
+
+            <h2>14.2 Modifications</h2>
+            <ul>
+                <li>We may modify this Agreement with notice through the App</li>
+                <li>Continued use after modifications constitutes acceptance</li>
+                <li>Material changes will be prominently communicated</li>
+            </ul>
+
+            <h2>14.3 Severability</h2>
+            <p>If any provision is found unenforceable, the remainder of the Agreement continues in effect.</p>
+
+            <h2>14.4 Waiver</h2>
+            <p>Our failure to enforce any provision does not waive our right to do so later.</p>
+
+            <div class="contact-info">
+                <h1><span class="section-number">15</span>Contact Information</h1>
+                <p>For questions about this Agreement:</p>
+                <p><strong>Email:</strong> <a href="mailto:son.jaehoon0826@gmail.com">son.jaehoon0826@gmail.com</a></p>
+                <p><strong>Address:</strong> 500 College Ave, Swarthmore, PA 19081</p>
+            </div>
+
+            <div class="agreement-acceptance">
+                <p><strong>By using Elysia, you acknowledge that you have read, understood, and agree to be bound by this End User License Agreement.</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
